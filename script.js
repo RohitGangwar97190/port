@@ -1,5 +1,5 @@
 var typed = new Typed(".auto_name", {
-    strings: ["Shubh Aggarwal", "Flutter Developer", "Programmer", "Backend Developer"],
+    strings: ["Rohit Gangwar", "Full stack web Developer", "Programmer"],
     typeSpeed: 105,
     backSpeed: 10,
     loop: true
