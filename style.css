@@ -6,6 +6,22 @@
     font-family: 'Noto Sans Mono', monospace;
 
 }
+.imgbx {
+  width: 300px;  /* or any fixed or responsive size you want */
+  height: 300px; /* maintain aspect ratio or fix height */
+  overflow: hidden;
+  border-radius: 8px; /* optional, for rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional */
+}
+
+.imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio and fills the container */
+  display: block;    /* removes any inline gap */
+  image-rendering: auto; /* default for smooth rendering */
+}
+
 
 body,
 html {
@@ -16,7 +32,7 @@ html {
 
 }
 .themecolor{
-    color: rgb(15, 231, 15);
+    color: rgb(47, 15, 231);
 }
 
 nav {
@@ -37,7 +53,7 @@ nav {
     width: 80%;
 }
 .logo span{
-    color: rgb(15, 231, 15);
+    color: rgb(69, 15, 231);
 
 }
 
@@ -65,41 +81,251 @@ nav a {
     color: white;
 }
 
-#main {
+  body {
+    background: black;
+  }
+  #main {
     font-size: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    /* background-color: red; */
     text-align: center;
-    height: calc(100% - 47px);
-}
-
-.auto_name {
-    color: rgb(15, 231, 15);
-}
-
-
-
-/* glowing effect
-.glow {
-    
-    
-    
-    animation: glow 1s ease-in-out infinite alternate;
+    height: 100vh;
   }
-  
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 20px #e4e9e9, 0 0 30px #e3e9e9;
+  .auto_name {
+    color: rgb(7, 21, 152);
+  }
+  .glow {
+    text-shadow: 0 0 8px rgb(15, 33, 231);
+  }
+body {
+  background-color: 000000; /* Pure black background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.github-calendar {
+  background-color: ff0000; /* Slightly lighter black for the card */
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 1200px;
+   max-height: 1200px;
+  margin: 60px auto;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2); /* Green glow */
+}
+
+.github-calendar h3 {
+  color: #00ff88; /* Neon green heading */
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.github-calendar .chart {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  filter: contrast(110%) brightness(1.2);
+}
+/* style.css */
+ body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
     }
-    
-    to {
-        text-shadow: 0 0 20px #d7ecec, 0 0 30px #b0b4b4;
-      /* text-shadow: 0 0 20px #c94254, 0 0 30px #c94254; */
-/* }
-  }  */
+
+    .projects-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #121212;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-title {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: green; /* neon blue */
+    }
+
+    .project-description {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      color: green;
+    }
+
+    .project-tags {
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #333;
+      color: grren;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      user-select: none;
+    }
+
+    .project-links .btn {
+      text-decoration: none;
+      color: #121212;
+      background: #00c8ff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      margin-right: 12px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .project-links .btn:hover {
+      background: #0099cc;
+    }
+
+    .btn-demo {
+      background: transparent;
+      color: #00c8ff;
+      border: 2px solid #00c8ff;
+    }
+
+    .btn-demo:hover {
+      background: #00c8ff;
+      color: #121212;
+    }
+
+    /* Responsive: stack cards on smaller screens */
+    @media (max-width: 768px) {
+      .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1117;
+  color: white;
+  padding: 20px;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #555;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: -21px;
+  background-color: #333;
+  border: 3px solid #0f1117;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline-marker.glow {
+  background-color: red;
+  box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+}
+
+.timeline-content {
+  background-color: #1c1f26;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  width: 30px;
+  height: 2px;
+  background-color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.company {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.offline {
+  background-color: #250818;
+  color: #ff436f;
+  box-shadow: 0 0 5px rgba(255, 67, 111, 0.3);
+}
+
+.remote {
+  background-color: #081b25;
+  color: #66ccff;
+  box-shadow: 0 0 5px rgba(102, 204, 255, 0.3);
+}
+
+
 
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<for mobile devices>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -176,14 +402,13 @@ nav a {
     }
    
 
-    #profilepic{
-        position: relative; 
-        width: 100%;
-        object-fit:cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    #profilepic {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain; /* or remove this if not needed */
+    display: block;
+}
+
 
     .banner .imgbx {
         position: relative;
@@ -347,7 +572,7 @@ section {
 
 
 .Intrest .content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 10px 3vw;
     grid-gap: 20px;
     display: grid;
@@ -396,101 +621,155 @@ section {
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>project<<<<<<<<<<<<<<<<<<<<<<, */
 
-.Project .content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 40px 0;
-    grid-gap: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+/* Container for all project cards */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr); /* 2 cards per row */
+  gap: 35px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Individual project card */
+.project-card {
+  background-color: #111827; /* dark blue-black */
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding:54px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.5rem;
+  color: #60a5fa; /* blue */
+  margin-bottom: 12px;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 1rem;
+  color: #cbd5e1; /* gray-300 */
+  margin-bottom: 20px;
+}
+
+/* Tags */
+.project-tags {
+  margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #1e3a8a; /* blue-900 */
+  color: #bfdbfe; /* blue-200 */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-right: 8px;
+  margin-bottom: 6px;
+}
+
+/* Buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 16px;
+  background-color: #2563eb; /* blue-600 */
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.btn-demo {
+  background-color: #059669; /* emerald-600 */
+}
+
+.btn-demo:hover {
+  background-color: #047857; /* emerald-700 */
 }
 
 
-.Project .content .workbx {
-    position: relative;
-    position: relative;
-    width: 80%;
-    height: 23vw;
-    overflow: hidden;
-}
-
-.Project .content .workbx .imgbx {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(0);
-    transition: 0.5s ease-in-out;
-}
-
-.Project .content .workbx:hover .imgbx {
-    transform: translateY(-100%);
-}
-.imgbx {
-    width: 120px; /* Reduced from 140px */
-    height: 120px; /* Reduced from 140px */
-    border-radius: 60%; /* Keeps circular shape */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.imgbx img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.Project .content .workbx .imgbx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.Project .content .workbx .textbx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-    transition: 0.5s ease-in-out;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Project .content .workbx:hover .textbx {
-    transform: translateY(0);
-}
-
-.Project .content .workbx .textbx h3 {
-    color: #fff;
-    font-size: 1em;
-    font-family: 'Noto Sans Mono', monospace;
-
-}
-#link{
-    filter: invert();
-    color: white;
-    height: 30px;
-    width: 30px;
-}
-
+ 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>Services<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<, */
 
 section.services{
     min-height: unset;
 }
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 3px solid #ccc; /* the branch line */
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  transition: box-shadow 0.3s ease;
+  border-radius: 6px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -31px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  z-index: 1;
+}
+
+/* Glow effect on hover */
+.timeline-item:hover {
+  box-shadow: 0 0 12px 3px rgba(255, 0, 0, 0.6);
+  border-left-color: rgba(255, 0, 0, 0.8);
+}
+
+.timeline-item:hover .timeline-marker {
+  border-color: #ff0000;
+  box-shadow: 0 0 12px 4px rgba(255, 0, 0, 0.8);
+}
+
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< contact form>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
  
-.ctitle{
+/* .ctitle{
     text-align: center;
     color: white;  
 }
@@ -579,7 +858,7 @@ section.services{
     text-transform: uppercase;
     border: none;
     max-width: 100%;
-}
+} */
 
 
 /* <<<<<<<<<<<<<<<<<<<<<<<,,footer>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
